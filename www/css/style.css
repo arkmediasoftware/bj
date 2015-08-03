@@ -1,0 +1,221 @@
+/* Empty. Add your own CSS if you like */
+
+html, body {
+	font-family: Arial;
+	font-size: 12px;
+	margin: 0px;
+	padding:0px;
+}
+
+.header {
+	position: fixed;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	z-index: 9999;
+	background-color: #f51742;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.header .title-bar {
+	margin-left: 10px;
+	line-height: 40px;
+	font-family: Calibri;
+	font-size: 14px;
+	font-weight: bold;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: #ffffff;
+	text-align: center;
+}
+
+.nav {
+	background-color: #eeeedd;
+	display: none;
+}
+.nav .nav-overlay {
+	position: absolute;
+	z-index: 1111;
+	top:0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: #000000;
+	opacity: 0.8;
+}
+.nav ul {
+	background-color: #eeeedd;
+	position: fixed;
+	top: 40px;
+	z-index: 1111;
+	margin: 0px;
+	padding: 0px;
+	width: 80%;
+	height: 100%;
+	font-family: Calibri;
+	-webkit-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
+}
+.nav ul li {
+	height: 45px;
+	line-height: 45px;
+	width: 100%;
+	border-bottom: 1px solid #f9f9f9;
+}
+.nav ul li a {
+	text-decoration: none;
+	color: #000000;
+	font-weight: bold;
+	padding:0px 15px;
+	display: block;
+}
+
+.container {
+	margin-top: 35px;
+	background-color: #ffffff;
+}
+
+/*Menu Animation*/
+.menu-animation {
+	position: relative;
+	display:  inline-block;
+	width: 30px;
+	height: 30px;
+	top: 5px;
+	left: 5px;
+}
+.menu-animation span {
+	margin: 0 auto;
+	position: relative;
+	top: 12px;
+}
+.menu-animation span:before, .menu-animation span:after {
+	position: absolute;
+	content: '';
+}
+.menu-animation span, .menu-animation span:before, .menu-animation span:after {
+	width: 30px;
+	height: 6px;
+	background-color: #ffffff;
+	display: block;
+}
+.menu-animation span:before {
+	margin-top: -12px;
+}
+.menu-animation span:after {
+	margin-top: 12px;
+}
+/* --- btn --- */
+.animation-button {
+	float: left;
+}
+.animation-button span {
+	transition-duration: 0s;
+	transition-delay: .2s;
+}
+.animation-button span.active {
+	background-color: rgba(0,0,0,0.0);
+	transition-delay: .2s;
+}
+.animation-button span:before {
+	transition-property: margin, transform;
+	transition-duration: .2s;
+	transition-delay: .2s, 0;
+}
+.animation-button span.active:before {
+	margin-top: 0;
+	transform: rotate(45deg);
+	transition-duration: .2s;
+	transition-delay: 0, .2s;
+}
+.animation-button span:after {
+	transition-property: margin, transform;
+	transition-duration: .2s;
+	transition-delay: .2s, 0;
+}
+.animation-button span.active:after {
+	margin-top: 0;
+	transform: rotate(-45deg);
+	transition-delay: 0, .2s;
+}
+
+/*23456789*/
+.apartment-page{}
+.apartment-page .main-apartment {
+	width: 100%;
+	height: 300px;
+	position: relative;
+	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+}
+.apartment-page .main-apartment .apartment-name {
+	position: absolute;
+	z-index: 10;
+	top: 20px;
+	left: 5px;
+	font-size: 22px;
+	font-weight: bold;
+	color: #000000;
+}
+.apartment-page .main-apartment .image-item{
+	height: 300px;
+}
+.apartment-page .main-apartment .image-item img {
+	width: 100%;
+	height: 100%;
+}
+
+.apartment-page .main-apartment .menu-caption {}
+.apartment-page .main-apartment .menu-caption ul {
+	position: absolute;
+	z-index: 10;
+	left: 0px;
+	bottom: 0px;
+	margin: auto;
+	padding: 0px;
+	list-style: none;
+	width: 100%;
+}
+.apartment-page .main-apartment .menu-caption ul li{
+	float: left;
+	width: 25%;
+	text-align: center;
+}
+
+.apartment-page .list-apartment {
+	padding: 10px;
+	background-color: #d1dcff;
+}
+.apartment-page .list-apartment .list-item {
+	height: 70px;
+	margin-bottom: 7px;
+	background-color: #fff;
+}
+.apartment-page .list-apartment .list-item:last-child {
+	border-bottom: 0px;
+}
+.apartment-page .list-apartment a {
+	display: block;
+	text-decoration: none;
+	color: #000000;
+}
+.apartment-page .list-apartment .list-item img{
+	float: left;
+	height: 100%;
+	width: 70px;
+}
+.apartment-page .list-apartment .list-item div{
+	float: left;
+	height: 70px;
+	line-height: 70px;
+	margin-left: 10px;
+	font-size: 16px;
+	color: #000000;
+	text-decoration: none;
+}

@@ -1,0 +1,22 @@
+<ion-content>
+	<div class="content highlight" ng-if="data.level == 0">
+		<div ng-repeat="items in data.items">
+			<div class="panel panel-info">
+				<div class="panel-heading">
+					<h4 class="panel-title">{{ items.main }}</h4>
+				</div>
+			</div>
+			<div class="list-group list-highlight">
+			  <a class="list-group-item" ng-repeat="sub in items.sub" href="#/app/apartment_category_{{ data.category.id }}/{{ data.data.id }}/{{ sub.id }}">{{ sub.name}} <span class=" glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
+			</div>
+		</div>
+	</div>
+
+	<div class="content highlight" ng-if="data.level > 0">
+		<div class="panel panel-info">
+			<div class="list-group list-highlight">
+			  <a class="list-group-item" ng-repeat="sub in data.items" href="#/app/apartment_category_{{ data.category.id }}/{{ data.data.id }}/{{ sub.id }}">{{ sub.name}} <span class=" glyphicon glyphicon-menu-right pull-right" aria-hidden="true"></span></a>
+			</div>
+		</div>
+	</div>
+</ion-content>

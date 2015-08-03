@@ -1,0 +1,16 @@
+<ion-content>
+	<div class="content" style="padding-top:0px; padding-bottom:50px; float:left; width:100%;">
+		<div class="gallery" ng-repeat="row in data.items">
+		    <a data-title="{{ row.name }}" data-gallery="multiimages" data-toggle="lightbox" href="{{ upload_url + row.images }}">
+		        <img class="img-responsive" src="{{  upload_url + row.images }}">
+		    </a>
+		</div>
+	</div>
+</ion-content>
+
+<script type="text/javascript">
+	$(document).delegate('*[data-toggle="lightbox"]', 'click', function(event) {
+	    event.preventDefault();
+	    $(this).ekkoLightbox();
+	}); 
+</script>
