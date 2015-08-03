@@ -6,6 +6,10 @@ html, body {
 	margin: 0px;
 	padding:0px;
 }
+ion-content {
+	margin-top: 40px;
+}
+
 
 .header {
 	position: fixed;
@@ -35,9 +39,9 @@ html, body {
 
 .nav {
 	background-color: #eeeedd;
-	display: none;
 }
 .nav .nav-overlay {
+	display: none;
 	position: absolute;
 	z-index: 1111;
 	top:0px;
@@ -48,14 +52,15 @@ html, body {
 	opacity: 0.8;
 }
 .nav ul {
-	background-color: #eeeedd;
+	display: none;
+	background-color: #fcfcfc;
 	position: fixed;
 	top: 40px;
 	z-index: 1111;
 	margin: 0px;
 	padding: 0px;
-	width: 80%;
 	height: 100%;
+	width: 100%;
 	font-family: Calibri;
 	-webkit-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 3px 0px 5px 0px rgba(0,0,0,0.75);
@@ -65,7 +70,7 @@ html, body {
 	height: 45px;
 	line-height: 45px;
 	width: 100%;
-	border-bottom: 1px solid #f9f9f9;
+	border-bottom: 1px solid #cccccc;
 }
 .nav ul li a {
 	text-decoration: none;
@@ -75,10 +80,7 @@ html, body {
 	display: block;
 }
 
-.container {
-	margin-top: 35px;
-	background-color: #ffffff;
-}
+.container {}
 
 /*Menu Animation*/
 .menu-animation {
@@ -110,6 +112,7 @@ html, body {
 .menu-animation span:after {
 	margin-top: 12px;
 }
+
 /* --- btn --- */
 .animation-button {
 	float: left;
@@ -148,23 +151,25 @@ html, body {
 .apartment-page{}
 .apartment-page .main-apartment {
 	width: 100%;
-	height: 300px;
+	height: 200px;
 	position: relative;
 	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 .apartment-page .main-apartment .apartment-name {
+	background-color: #f2f2f2;
+	opacity: 0.7;
+	width: 100%;
+	padding: 10px 15px;
 	position: absolute;
 	z-index: 10;
-	top: 20px;
-	left: 5px;
 	font-size: 22px;
 	font-weight: bold;
 	color: #000000;
 }
 .apartment-page .main-apartment .image-item{
-	height: 300px;
+	height: 200px;
 }
 .apartment-page .main-apartment .image-item img {
 	width: 100%;
@@ -189,13 +194,12 @@ html, body {
 }
 
 .apartment-page .list-apartment {
-	padding: 10px;
-	background-color: #d1dcff;
+	padding: 20px 10px;
 }
 .apartment-page .list-apartment .list-item {
 	height: 70px;
 	margin-bottom: 7px;
-	background-color: #fff;
+	background-color: #f9f9f9;
 }
 .apartment-page .list-apartment .list-item:last-child {
 	border-bottom: 0px;

@@ -1,59 +1,52 @@
-<ion-content>
-	<div class="container apartment-page">
-		<div class="main-apartment">
-			<div class="apartment-name">{{ data.main.name }}</div>
-			<div class="swiper-container" style="z-index:0px;">
-			    <div class="swiper-wrapper image-item">
-					<div class="swiper-slide">
-				        <a href="javascript:;">
-				        	<img src="{{ upload_url + 'apartment/' + data.main.images }}">
-						</a>
-					</div>
-					<div class="swiper-slide" ng-repeat="gallery in data.gallery">
-				        <a href="javascript:;">
-				        	<img src="{{ upload_url + gallery.images }}">
-						</a>
-				    </div>
+<div class="container apartment-page">
+	<ion-content style="margin-top:40px;">
+	<div class="main-apartment">
+		<div class="apartment-name">{{ data.main.name }}</div>
+		<div class="swiper-container" style="z-index:0px;">
+		    <div class="swiper-wrapper image-item">
+				<div class="swiper-slide">
+			        <a href="javascript:;">
+			        	<img src="{{ upload_url + 'apartment/' + data.main.images }}" class="lazy" alt="{{ data.main.name }}">
+					</a>
 				</div>
-			</div>
-			<div class="menu-caption">
-				<ul>
-					<li><a href="#" title="Highlight"><img src="ico/highlight.png" width="50px" height="50px"></a></li>
-					<li><a href="#" title="Usefull Info"><img src="ico/info.png" width="50px" height="50px"></a></li>
-					<li><a href="#" title="Less Available"><img src="ico/less_available.png" width="50px" height="50px"></a></li>
-					<li><a href="#" title="Notification/News"><img src="ico/notification.png" width="50px" height="50px"></a></li>
-				</ul>
+				<div class="swiper-slide" ng-repeat="gallery in data.gallery">
+			        <a href="javascript:;">
+			        	<img src="{{ upload_url + gallery.images }}" class="lazy" alt="{{ gallery.name }}">
+					</a>
+			    </div>
 			</div>
 		</div>
-
-		<div class="list-apartment">
-			<a ng-repeat="apart in data.list" href="#/app/apartment/{{ apart.id }}">
-				<div class="list-item">
-						<img src="{{ upload_url + 'apartment/' + apart.images }}">
-						<div>{{ apart.name }}</div>
-				</div>
-			</a>
-		<!--
-		<div class="list_apartment">
-			<div class="item-apart" ng-repeat="row in data.list" id="{{ row.id }}" ng-href="#/app/apartment_details/{{ row.id }}">
-				<a href="#/app/apartment_details/{{ row.id }}">
-					<img src="{{ upload_url + 'apartment/' + row.images }}">
-					<div class="item-apart-overlay"></div>
-					<div class="apart-info" ng-href="#/app/apartment_details/{{ row.id }}">{{ row.name }}</div>
-				</a>
-			</div>
+		<div class="menu-caption">
+			<ul>
+				<li><a href="#/app/apartment_category_1/{{ data.main.id }}/0" title="Highlight"><img src="ico/highlight.png" width="50px" height="50px"></a></li>
+				<li><a href="#/app/apartment_category_3/{{ data.main.id }}/0" title="Usefull Info"><img src="ico/info.png" width="50px" height="50px"></a></li>
+				<li><a href="#/app/apartment_category_4/{{ data.main.id }}/0" title="Less Available"><img src="ico/less_available.png" width="50px" height="50px"></a></li>
+				<li><a href="#/app/apartment_category_5/{{ data.main.id }}/0" title="Notification/News"><img src="ico/notification.png" width="50px" height="50px"></a></li>
+			</ul>
 		</div>
-		-->
 	</div>
-</ion-content>
+	<div class="list-apartment">
+		<a ng-repeat="apart in data.list" href="#/app/apartment/{{ apart.id }}">
+			<div class="list-item">
+					<img src="{{ upload_url + 'apartment/' + apart.images }}" class="lazy" alt="{{ apart.name }}">
+					<div>{{ apart.name }}</div>
+			</div>
+		</a>
+	</div>
+	</ion-content>
+</div>
 
 <script type="text/javascript">
 $(document).ready(function(){
+	$("img.lazy").Lazy({
+		delay:2000
+	});
+
 	setTimeout(function(){
 	    var swiper = new Swiper('.swiper-container', {
 	        preloadImages: true,
 	        lazyLoading: true
 	    });
 	},5000);
-})
+});
 </script>

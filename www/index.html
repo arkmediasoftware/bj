@@ -12,19 +12,25 @@
     <!-- JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <script src="lib/slicknav/jquery.slicknav.js"></script>
+
+    <script type="text/javascript" src="js/jquery.lazy.min.js"></script>
+    <script type="text/javascript" src="js/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="js/header-animation.js"></script>
+
 
     <script type="text/javascript">
-      $(document).ready(function(){
-        $('a.animation-button').click(function(){
-          $('.nav').toggle(function(){
-            $('a.animation-button').find('span').toggleClass('active');
-          });
-        })
-        $('.nav-overlay, .close-menu').click(function(){
-          $('a.animation-button').click();
-        })
+    $(function(){
+      $('.menu-animation').click(function(){
+        $('.nav ul').slideToggle('fast');
+        $(this).find('span').toggleClass('active');
       })
+
+      $('.close-menu').click(function(){
+        $('.nav ul').hide();
+        $('.menu-animation').find('span').toggleClass('active');
+      })
+    })
     </script>
 
     <!-- Swipper -->
@@ -46,7 +52,7 @@
     <script src="js/controllers.js"></script>
   </head>
   <body ng-app="starter">
-      <div class="header">
+      <div class="header nav-up">
         <a href="javascript:;" class="menu-animation animation-button"><span></span></a>
         <div class="title-bar">Balconies Jakarta</div>
       </div>

@@ -4,6 +4,7 @@ var upload_url = site_url + 'asset/upload/';
 
 angular.module('starter.controllers', [])
 .controller('AppCtrl', function($rootScope, $scope, $http){})
+
 .controller('select_apartment_ctrl', function($scope,$http,$stateParams){
     $http.get(site_url + 'apartment/list')
     .success(function(data){

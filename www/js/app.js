@@ -91,17 +91,6 @@ angular.module('starter', ['ionic','starter.controllers'])
     }
   })
 
-  .state('app.apartment_category_2', {
-    cache: false,
-    url: "/apartment_category_2/:apartment_id/:level",
-    views: {
-      'page_content': {
-        templateUrl: "views/apartment/gallery.html",
-        controller: 'apartment_gallery_ctrl'
-      }
-    }
-  })
-
   .state('app.apartment_category_3', {
     cache: false,
     url: "/apartment_category_3/:apartment_id/:level",
