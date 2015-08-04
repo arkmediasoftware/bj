@@ -45,6 +45,16 @@ angular.module('starter', ['ionic','starter.controllers'])
     }
   })
 
+  .state('app.profile', {
+    cache: false,
+    url: "/profile",
+    views: {
+      'page_content': {
+        templateUrl: "views/profile.html",
+        controller: 'profile_ctrl'
+      }
+    }
+  })
   .state('app.select_apartment', {
     cache: false,
     url: "/select_apartment",

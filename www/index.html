@@ -17,6 +17,7 @@
     <script type="text/javascript" src="js/jquery.transit.min.js"></script>
     <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
     <script type="text/javascript" src="js/header-animation.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
 
     <script type="text/javascript">
@@ -42,7 +43,6 @@
 
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
-    <script type="text/javascript" src="lib/angularjs/angular-route.min.js"></script>
 
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
@@ -55,13 +55,16 @@
       <div class="header nav-up">
         <a href="javascript:;" class="menu-animation animation-button"><span></span></a>
         <div class="title-bar">Balconies Jakarta</div>
+        <a href="#" class="auth-button login-button" style="display:none" ng-click="showPopupLogin()"><span>Login</span></a>
+        <a href="#/app/profile" class="auth-button profile-button" style="display:none"><span>Profile</span></a>
       </div>
       <div class="nav">
         <div class="nav-overlay"></div>
         <ul>
           <li><a href="#/app/apartment" class="close-menu">Apartment</a></li>
-          <li><a href="#/app/class_communities" class="close-menu">Class</a></li>
+          <li><a href="#/app/class_communities" class="close-menu">Class &amp; Communities</a></li>
           <li><a href="#/app/events" class="close-menu">Upcommig Events</a></li>
+          <li><a href="#/app/notification" class="close-menu">Notification / News</a></li>
           <li><a href="#/app/about_us" class="close-menu">About Us</a></li>
         </ul>
       </div>

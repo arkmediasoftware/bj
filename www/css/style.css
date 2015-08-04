@@ -25,7 +25,8 @@ ion-content {
 	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
 }
 .header .title-bar {
-	margin-left: 10px;
+	width: 75%;
+	margin-left: 12%;
 	line-height: 40px;
 	font-family: Calibri;
 	font-size: 14px;
@@ -34,7 +35,21 @@ ion-content {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	color: #ffffff;
-	text-align: center;
+	text-align: left;
+}
+
+.header a.auth-button {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 40px;
+	line-height: 40px;
+	text-decoration: none;
+	background-color: #4ed5c7;
+	padding: 0px 10px;
+	color: #fff;
+	font-weight: bold;
+	display: block;
 }
 
 .nav {
